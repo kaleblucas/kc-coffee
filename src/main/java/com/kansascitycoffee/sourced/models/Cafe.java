@@ -18,4 +18,24 @@ public class Cafe {
         this.name = name;
         this.location = location;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public CafeLocation getLocation() {
+        return location;
+    }
+
+    public void setLocation(CafeLocation location) {
+        this.location = location;
+    }
 }

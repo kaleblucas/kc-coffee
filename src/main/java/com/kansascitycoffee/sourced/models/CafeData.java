@@ -31,6 +31,15 @@ public class CafeData {
         return null;
     }
 
+
+    public static ArrayList<Cafe> findAll() {
+
+        // load data, if not already loaded
+        loadData();
+
+        return new ArrayList<>(allCafes);
+    }
+
     /**
      * Read in data from a CSV file and store it in an ArrayList of Job objects.
      */

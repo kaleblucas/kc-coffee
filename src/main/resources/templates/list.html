@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Kansas City Coffee</title>
+</head>
+<body>
+    <div th:each="cafe : ${cafes}">
+        <iframe width="600" height="450" frameborder="0" style="border:0" th:src="@{https://www.google.com/maps/embed/v1/place(q=${cafe.getLocation().toString()}, key='AIzaSyDJuU57bm106Je_8RI1za_saTmHklbrn_4')}" allowfullscreen></iframe>
+        <div th:text="${cafe.getName()}"></div>
+        <div th:text="${cafe.getLocation().toString()}"></div>
+
+        <br>
+
+    </div>
+
+</body>
+</html>
