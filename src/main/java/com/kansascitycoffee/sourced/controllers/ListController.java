@@ -25,6 +25,17 @@ public class ListController {
         model.addAttribute("cafes", cafes);
         return "list";
     }
+    @RequestMapping(value = "cafe")
+    public String cafes(Model model, @RequestParam int selection){
+       ArrayList<Cafe> cafes;
+       cafes = CafeData.findAll();
+       for (Cafe cafe : cafes){
+           if (cafe.getId() == selection) {
+               model.addAttribute("cafe", cafe);
+           }
+       }
+       return "cafe";
+    }
 
 //    @RequestMapping(value = "companies")
 //    public String listCompaniesByColumnAndValue(Model model, @RequestParam String column, @RequestParam String value) {

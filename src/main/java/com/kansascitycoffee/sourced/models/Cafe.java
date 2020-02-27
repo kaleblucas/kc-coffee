@@ -9,12 +9,12 @@ public class Cafe {
     private CafeLocation location;
 
     public Cafe() {
-        id = nextId;
+        this.id = nextId;
         nextId++;
     }
 
     public Cafe(String name, CafeLocation location){
-        super();
+        this();
         this.name = name;
         this.location = location;
     }
