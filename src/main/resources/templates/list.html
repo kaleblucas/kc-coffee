@@ -5,7 +5,7 @@
     <title>Kansas City Coffee</title>
 </head>
 <body>
-    <div th:each="cafe : ${cafes}">
+    <div align="center" th:each="cafe : ${cafes}">
         <a th:href="@{/list/cafe(selection=${cafe.getId()})}" th:text="${cafe.getName()}"></a>
 
 

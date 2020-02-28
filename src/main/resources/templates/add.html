@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Kansas City Coffee</title>
+</head>
+<body>
+    <form method="post">
+        <label>Name: <input th:field="${cafe.setName()}"></label><br>
+        <label>Address: <input th:field="${cafe.setLocation()}"></label>
+        <input type="submit" value="Add">
+    </form>
+</body>
+</html>

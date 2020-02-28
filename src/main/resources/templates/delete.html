@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Kansas City Coffee</title>
+</head>
+<body>
+    <form method="post">
+        <div th:each="cafe : ${cafes}">
+            <label>
+                <input type="checkbox" name="cafeIds" th:value="${cafe.getId()}"> <span th:text="${cafe.getName() + ', ' + cafe.getLocation()}"></span>
+            </label>
+        </div>
+        <input type="submit" value="Delete">
+    </form>
+</body>
+</html>

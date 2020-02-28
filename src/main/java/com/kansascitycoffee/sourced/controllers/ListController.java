@@ -1,6 +1,8 @@
 package com.kansascitycoffee.sourced.controllers;
 
+import com.kansascitycoffee.sourced.data.CafeRepository;
 import com.kansascitycoffee.sourced.models.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,26 +16,27 @@ import java.util.HashMap;
 @RequestMapping(value = "list")
 public class ListController {
 
-    public ListController () {
-
-    }
+    @Autowired
+    private CafeRepository cafeRepository;
 
     @RequestMapping(value = "")
     public String list(Model model) {
-        ArrayList<Cafe> cafes;
-        cafes = CafeData.findAll();
-        model.addAttribute("cafes", cafes);
+        model.addAttribute("cafes",cafeRepository.findAll());
+//        ArrayList<Cafe> cafes;
+//        cafes = CafeData.findAll();
+//        model.addAttribute("cafes", cafes);
         return "list";
     }
     @RequestMapping(value = "cafe")
     public String cafes(Model model, @RequestParam int selection){
-       ArrayList<Cafe> cafes;
-       cafes = CafeData.findAll();
-       for (Cafe cafe : cafes){
-           if (cafe.getId() == selection) {
-               model.addAttribute("cafe", cafe);
-           }
-       }
+        cafeRepository.findById(selection).ifPresent(cafe -> model.addAttribute("cafe", cafe));
+//       ArrayList<Cafe> cafes;
+//       cafes = CafeData.findAll();
+//       for (Cafe cafe : cafes){
+//           if (cafe.getId() == selection) {
+//               model.addAttribute("cafe", cafe);
+//           }
+//       }
        return "cafe";
     }
 
