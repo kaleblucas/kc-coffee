@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:frament="head">
+    <meta charset="UTF-8">
+    <title>Kansas City Coffee</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <script th:src = "@{/scripts.js}"></script>
+</head>
+<body>
+<nav th:fragment="navigation" id="nav-bar">
+    <h1><a id="nav-header" href="javascript:;">>&thinsp;coffee</a></h1>
+    <ul id="nav-link-ul">
+        <li><a class="nav-link" href="/browse">browse</a></li>
+        <li><a class="nav-link" href="/edit">edit</a></li>
+        <li><a class="nav-link" href="/about">about</a></li>
+    </ul>
+</nav>
+</body>
+</html>

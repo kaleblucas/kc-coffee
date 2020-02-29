@@ -14,16 +14,16 @@ public class AddController {
     @Autowired
     private CafeRepository cafeRepository;
 
-    @GetMapping()
+    @GetMapping("")
     public String displayAddCafeForm(Model model){
         model.addAttribute(new Cafe());
-    return "add";
+        return "add";
     }
 
     @PostMapping()
     public String processAddCafeForm(@ModelAttribute Cafe newCafe){
         cafeRepository.save(newCafe);
-        return "redirect:";
+        return "redirect:edit";
     }
 
 

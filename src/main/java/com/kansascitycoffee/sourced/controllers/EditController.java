@@ -8,26 +8,27 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping("delete")
-public class DeleteController {
+@RequestMapping("edit")
+public class EditController {
 
     @Autowired
     private CafeRepository cafeRepository;
 
     @GetMapping()
-    public String displayDeleteCafeForm(Model model){
-        model.addAttribute("cafes", cafeRepository.findAll() );
-        return "delete";
+    public String displayEditMode(Model model){
+        model.addAttribute("cafes", cafeRepository.findAll());
+        return "edit";
     }
 
-    @PostMapping()
-    public String processDeleteCafeForm(@RequestParam int[] cafeIds){
-        if (cafeIds != null) {
-            for (int id : cafeIds) {
+    @PostMapping("cafe")
+    public String processDeleteCafeForm(@RequestParam int[] q){
+        if (q != null) {
+            for (int id : q) {
                 cafeRepository.deleteById(id);
             }
         }
 
         return "redirect:";
     }
+
 }

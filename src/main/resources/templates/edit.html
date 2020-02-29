@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:include="fragments :: head">
+</head>
+<body>
+<nav th:replace="fragments :: navigation"></nav>
+<div class="content-wrapper">
+    <div class="cafe-item-wrapper" th:each="cafe : ${cafes}">
+    <form th:action="@{/edit/cafe(q=${cafe.getId()})}" method="post">
+        <button class="cafe-item del" type="submit" onclick="return confirm('Are you sure?')" th:text="${cafe.getName().toUpperCase()}"></button>
+    </form>
+    </div><div class="cafe-item-wrapper">
+        <button class="cafe-item add"><a class="cafe-item add" th:href="@{/add}">&#65291</a></button>
+    </div>
+
+
+<!--    <div class="cafe-item-wrapper" th:each="cafe : ${cafes}">-->
+<!--        <a class="cafe-item del" th:href="@{/list/cafe(q=${cafe.getId()})}" th:text="${cafe.getName().toUpperCase()}"></a>-->
+<!--    </div>-->
+</div>
+</body>
+</html>

@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head>
-    <meta charset="UTF-8">
-    <title>Kansas City Coffee</title>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
 </head>
 <body>
-    <form method="post">
-        <label>Name: <input th:field="${cafe.setName()}"></label><br>
-        <label>Address: <input th:field="${cafe.setLocation()}"></label>
-        <input type="submit" value="Add">
-    </form>
+<nav th:replace="fragments :: navigation"></nav>
+<div class="content-wrapper">
+    <div class="add-form-wrapper">
+        <form id="add-form" method="post">
+            <label>NAME OF CAFE<br> <input type="text" th:field="${cafe.name}"></label><br><br>
+            <label>ADDRESS (STREET, CITY, STATE, ZIP)<br> <input type="text" th:field="${cafe.location}"></label><br><br><br>
+            <input id="add-button" type="submit" value="&#65291">
+        </form>
+    </div>
+</div>
 </body>
 </html>

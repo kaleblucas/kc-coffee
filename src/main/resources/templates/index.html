@@ -1,17 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<head th:replace="fragments :: head">
 </head>
 <body>
-<nav>
-    <h1>KC Coffee Sourced</h1>
-    <ul class="nav">
-        <li><a href="/list">Browse Kansas City's Cafes</a></li>
-        <li><a href="/add">Add Cafes</a></li>
-        <li><a href="/delete">Delete Cafes</a></li>
-    </ul>
-</nav>
+<nav th:replace="fragments :: navigation"></nav>
 </body>
 </html>
