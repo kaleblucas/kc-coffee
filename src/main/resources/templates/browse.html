@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head th:include="fragments :: head">
-    <link href="https://fonts.googleapis.com/css?family=Saira+Condensed&display=swap" rel="stylesheet">
-</head>
+<head th:include="fragments :: head"></head>
 <body>
 <nav th:replace="fragments :: navigation"></nav>
 
@@ -18,7 +16,7 @@
         <h2 th:text="${cafe.getName()}"></h2>
         <div th:text="${cafe.getLocation()}"></div><br>
         <iframe width="300" height="225" frameborder="0" style="border:0" th:src="@{https://www.google.com/maps/embed/v1/place(q=${cafe.getLocation()}, key='AIzaSyDJuU57bm106Je_8RI1za_saTmHklbrn_4')}" allowfullscreen></iframe>
-        <p style="text-align:justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At quis risus sed vulputate odio ut. Porttitor lacus luctus accumsan tortor. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Risus nullam eget felis eget nunc lobortis. Euismod in pellentesque massa placerat duis ultricies lacus sed. Diam quam nulla porttitor massa id neque aliquam vestibulum. At elementum eu facilisis sed odio morbi. Nibh cras pulvinar mattis nunc sed blandit libero volutpat. Nunc sed id semper risus in hendrerit gravida rutrum.</p>
+        <p style="text-align:justify;" th:text="${cafe.getDescription()}"></p>
 </div>
 
 

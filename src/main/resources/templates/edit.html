@@ -3,16 +3,44 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head th:include="fragments :: head">
 </head>
-<body>
+<body style="background-color: rgb(130, 63, 57);">
 <nav th:replace="fragments :: navigation"></nav>
 <div class="content-wrapper">
-    <div class="cafe-item-wrapper" th:each="cafe : ${cafes}">
-    <form th:action="@{/edit/cafe(q=${cafe.getId()})}" method="post">
-        <button class="cafe-item del" type="submit" onclick="return confirm('Are you sure?')" th:text="${cafe.getName().toUpperCase()}"></button>
-    </form>
-    </div><div class="cafe-item-wrapper">
-        <button class="cafe-item add"><a class="cafe-item add" th:href="@{/add}">&#65291</a></button>
+
+        <div class="cafe-item-wrapper" th:each="cafe : ${cafes}">
+        <form th:action="@{/edit/cafe(cafeId=${cafe.getId()})}" method="post">
+            <button class="cafe-item del" type="submit" th:text="${cafe.getName().toUpperCase()}"></button>
+        </form>
+        </div><div class="cafe-item-wrapper"><!--
+            --><button class="cafe-item add" th:onclick="'window.location.href = \'' + @{/add} + '\''">&#65291</button>
+        </div>
+</div>
+    <div th:if="${cafe != null}" class="cafe-wrapper">
+        <form th:action="@{/edit}" method="post">
+            <input type="hidden" th:field="*{cafe.id}"/>
+            <input class="input-update" th:value="${cafe.getName()}" th:field="${cafe.name}"/><br><br>
+            <input class="input-update" th:value="${cafe.getLocation()}" th:field="${cafe.location}"/><br><br>
+            <iframe width="300" height="225" frameborder="0" style="border:0" th:src="@{https://www.google.com/maps/embed/v1/place(q=${cafe.getLocation()}, key='AIzaSyDJuU57bm106Je_8RI1za_saTmHklbrn_4')}" allowfullscreen></iframe><br><br>
+            <textarea class="input-update" id="input-description" th:value="${cafe.getDescription()}" th:field="${cafe.description}"/>
+            <button class="form-button" id="update-button" type="submit">SAVE</button>
+        </form>
+        <form th:action="@{/edit/cafe(cafeId=${cafe.getId()}, del='yes')}" method="post">
+            <button class="form-button" id="delete-button" type="submit" onclick="return confirm('Are you sure you want to delete? This action cannot be undone.')">DELETE</button>
+        </form>
     </div>
+
+
+
+
+
+<!--    <div class="cafe-item-wrapper" th:each="cafe : ${cafes}">-->
+<!--    <form th:action="@{/edit/cafe(d=${cafe.getId()})}" method="post">-->
+<!--        <button class="cafe-item del" type="submit" onclick="return confirm('Are you sure?')" th:text="${cafe.getName().toUpperCase()}"></button>-->
+<!--    </form>-->
+<!--    </div><div class="cafe-item-wrapper">-->
+<!--        <button class="cafe-item add"><a class="cafe-item add" th:href="@{/add}">&#65291</a></button>-->
+<!--    </div>-->
+
 
 
 <!--    <div class="cafe-item-wrapper" th:each="cafe : ${cafes}">-->

@@ -8,8 +8,9 @@
 <div class="content-wrapper">
     <div class="add-form-wrapper">
         <form id="add-form" method="post">
-            <label>NAME OF CAFE<br> <input type="text" th:field="${cafe.name}"></label><br><br>
-            <label>ADDRESS (STREET, CITY, STATE, ZIP)<br> <input type="text" th:field="${cafe.location}"></label><br><br><br>
+            <label>NAME OF CAFE<br> <input id="name-entry" type="text" th:field="${cafe.name}"></label><br><br>
+            <label>ADDRESS (STREET, CITY, STATE, ZIP)<br> <input type="text" th:field="${cafe.location}"></label><br><br>
+            <label>DESCRIPTION OF CAFE<br><input id="description-entry" type="text" th:field="${cafe.description}"></label><br><br><br>
             <input id="add-button" type="submit" value="&#65291">
         </form>
     </div>

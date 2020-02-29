@@ -21,14 +21,26 @@ public class EditController {
     }
 
     @PostMapping("cafe")
-    public String processDeleteCafeForm(@RequestParam int[] q){
-        if (q != null) {
-            for (int id : q) {
-                cafeRepository.deleteById(id);
+    public String processDeleteCafeForm(Model model, @RequestParam Integer cafeId, @RequestParam (value = "del", required = false) String del){
+        model.addAttribute("cafes",cafeRepository.findAll());
+        if (del != null) {
+            if (del.equals("yes")) {
+                cafeRepository.deleteById(cafeId);
+                return "redirect:/edit/";
             }
         }
+        if(cafeId != null){
+            cafeRepository.findById(cafeId).ifPresent(cafe -> model.addAttribute("cafe", cafe));
+        }
 
-        return "redirect:";
+
+        return "edit";
+    }
+
+    @PostMapping()
+    public String processUpdateCafeForm(@ModelAttribute Cafe cafe){
+        cafeRepository.save(cafe);
+        return "redirect:/edit";
     }
 
 }
