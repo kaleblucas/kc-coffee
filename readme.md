@@ -38,7 +38,7 @@ https://trello.com/b/tu1XRmu7
 **Progress Reports:**
 
 <details>
- <summary>4/13/2020 -- Wireframing</summary>
+ <summary>4.13.2020—Wireframing</summary>
  
 > After a short hiatus, I'm returning to this project with a fresh mind and intentions of broadening scope. Today, we're tackling wireframing. The original design for the UX seemed clunky, outdated, and difficult to optimize for mobile: 
 > 
@@ -65,5 +65,5 @@ https://trello.com/b/tu1XRmu7
 >
 >Alas, an experience that's easier to navigate and clearer to the user. We may pull design elements from previous ideas, but implement them in such a way that their usage is more intuitive and remains aware of  usage trends.
 >
-> \> (end 4/13/2020)
+> \> (end 4.13.2020)
 </details>
