@@ -51,7 +51,7 @@ https://trello.com/b/tu1XRmu7
 > 
 > <img src="https://github.com/kaleblucas/kc-coffee/blob/master/wireframes/alternates/flat_list_ui_wireframe.png?raw=true" width="600">
 > 
-> These concepts relied too heavily on a widescreen format, and weren't designed with common user experience in mind. They focused on navigation to direct you to the content rather than present it upfront. This could lead to quick user fatigue or disinterest in the website entirely. After conversations with my "in-house designer" and some glances at popular websites. We modified the format.
+> These concepts relied too heavily on a widescreen format, and weren't designed with common user experience in mind. They focused on navigation to direct you to the content rather than present it upfront. This could lead to quick user fatigue or disinterest in the website entirely. After conversations with my "in-house designer" and some glances at popular websites, we modified the format.
 > 
 > Landing Page:
 >
