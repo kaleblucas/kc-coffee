@@ -52,12 +52,15 @@ https://trello.com/b/tu1XRmu7
 > These concepts relied too heavily on a widescreen format, and weren't designed with common user experience in mind. They focused on navigation to direct you to the content rather than present it upfront. This could lead to quick user fatigue or disinterest in the website entirely. After conversations with my "in-house designer" and some glances at popular websites. We modified the format.
 > 
 > Landing Page:
+>
 > <img src="https://github.com/kaleblucas/kc-coffee/blob/master/wireframes/KC-COFFEE-WIREFRAME-1-1.png?raw=true" width="400">
 > 
 >Cafe Page:
+>
 > <img src="https://github.com/kaleblucas/kc-coffee/blob/master/wireframes/KC-COFFEE-WIREFRAME-1-2.png?raw=true" width="400">
 > 
 > Cafe-specific Coffee Page:
+>
 > <img src="https://github.com/kaleblucas/kc-coffee/blob/master/wireframes/KC-COFFEE-WIREFRAME-1-3.png?raw=true" width="400">
 >
 >Alas, an experience that's easier to navigate and clearer to the user. We may pull design elements from previous ideas, but implement them in such a way that their usage is more intuitive and remains aware of  usage trends.
