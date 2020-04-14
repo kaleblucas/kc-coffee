@@ -58,7 +58,7 @@ https://trello.com/b/tu1XRmu7
 ![enter image description here](https://github.com/kaleblucas/kc-coffee/blob/master/wireframes/KC-COFFEE-WIREFRAME-1-2.png?raw=true =400x)
 > 
 > Cafe-specific Coffee Page:
-> ![enter image description here](https://github.com/kaleblucas/kc-coffee/blob/master/wireframes/KC-COFFEE-WIREFRAME-1-3.png?raw=true =400x)
+> <img src="https://github.com/kaleblucas/kc-coffee/blob/master/wireframes/KC-COFFEE-WIREFRAME-1-3.png?raw=true" width="400">
 >
 >Alas, an experience that's easier to navigate and clearer to the user. We may pull design elements from previous ideas, but implement them in such a way that their usage is more intuitive and remains aware of  usage trends.
 >
