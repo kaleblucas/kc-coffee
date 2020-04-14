@@ -37,8 +37,6 @@ https://trello.com/b/tu1XRmu7
 
 **Progress Reports:**
 
- 
-
 <details>
  <summary>4/13/2020</summary>
  
