@@ -53,13 +53,14 @@ https://trello.com/b/tu1XRmu7
 > 
 > Landing Page:
 >
-> <img src="https://github.com/kaleblucas/kc-coffee/blob/master/wireframes/KC-COFFEE-WIREFRAME-1-1.png?raw=true" width="400">
+><img src="https://github.com/kaleblucas/kc-coffee/blob/master/wireframes/KC-COFFEE-WIREFRAME-1-1.png?raw=true" width="400">
 > 
 >Cafe Page:
 >
 > <img src="https://github.com/kaleblucas/kc-coffee/blob/master/wireframes/KC-COFFEE-WIREFRAME-1-2.png?raw=true" width="400">
 > 
-> Cafe-specific Coffee Page:
+> 
+>Cafe-specific Coffee Page:
 >
 > <img src="https://github.com/kaleblucas/kc-coffee/blob/master/wireframes/KC-COFFEE-WIREFRAME-1-3.png?raw=true" width="400">
 >
