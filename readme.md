@@ -42,6 +42,7 @@ https://trello.com/b/tu1XRmu7
 
 <details>
  <summary>4/13/2020</summary>
+ 
 > After a short hiatus, I'm returning to this project with a fresh mind and intentions of broadening scope. Today, we're tackling wireframing. The original design for the UX seemed clunky, outdated, and difficult to optimize for mobile: 
 > 
 > <img src="https://github.com/kaleblucas/kc-coffee/blob/master/wireframes/alternates/bubble_list_wireframe.png?raw=true" width="600">
