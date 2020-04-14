@@ -30,7 +30,6 @@ This is an attempt to make transparent the cafes, the suppliers, the farms, etc.
  - Website deployment
 
 **Project Tracker**
-
 https://trello.com/b/tu1XRmu7
 
 
