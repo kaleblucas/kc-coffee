@@ -14,7 +14,7 @@ public class EditController {
     @Autowired
     private CafeRepository cafeRepository;
 
-    @GetMapping()
+    @GetMapping("")
     public String displayEditMode(Model model){
         model.addAttribute("cafes", cafeRepository.findAll());
         return "edit";

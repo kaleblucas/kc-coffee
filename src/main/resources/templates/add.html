@@ -6,14 +6,37 @@
 <body>
 <nav th:replace="fragments :: navigation"></nav>
 <div class="content-wrapper">
-    <div class="add-form-wrapper">
-        <form id="add-form" method="post">
-            <label>NAME OF CAFE<br> <input id="name-entry" type="text" th:field="${cafe.name}"></label><br><br>
-            <label>ADDRESS (STREET, CITY, STATE, ZIP)<br> <input type="text" th:field="${cafe.location}"></label><br><br>
-            <label>DESCRIPTION OF CAFE<br><input id="description-entry" type="text" th:field="${cafe.description}"></label><br><br><br>
-            <input id="add-button" type="submit" value="&#65291">
+    <form class="add-form" action="add/cafe" method="post">
+            <label>NAME OF CAFE<br> <input name="name-entry" type="text" th:field="${cafe.name}"></label><br>
+            <label>ADDRESS (STREET, CITY, STATE, ZIP)<br> <input type="text" th:field="${cafe.location}"></label><br>
+            <label>DESCRIPTION OF CAFE<br><input name="description-entry" type="text" th:field="${cafe.description}"></label><br>
+            <input name="add-button" type="submit" value="&#65291">
+        </form><br><br><br><br>
+
+        <form class="add-form" action="add/coffee" method="post">
+            <label>NAME OF COFFEE<br> <input name="name-entry" type="text" th:field="${coffee.name}"></label><br>
+            <label>DESCRIPTION OF COFFEE<br> <input type="text" th:field="${coffee.description}"></label><br>
+            <label>CAFE<select name="cafeId">
+                <option th:each="cafe : ${cafes}"
+                        th:text="${cafe.name}"
+                        th:value="${cafe.id}"></option>
+            </select></label>
+            <label>FARM<select name="farmId">
+                <option th:each="farm : ${farms}"
+                        th:text="${farm.name}"
+                        th:value="${farm.id}"></option>
+            </select></label>
+            <input name="add-button" type="submit" value="&#65291">
+        </form><br><br><br><br>
+
+        <form class="add-form" action="add/farm" method="post">
+            <label>NAME OF FARM<br> <input name="name-entry" type="text" th:field="${farm.name}"></label><br><br>
+            <label>LOCATION<br> <input type="text" th:field="${farm.location}"></label><br><br>
+            <label>DESCRIPTION OF FARM<br><input name="description-entry" type="text" th:field="${farm.description}"></label><br><br><br>
+            <input name="add-button" type="submit" value="&#65291">
         </form>
-    </div>
 </div>
+
+
 </body>
 </html>

@@ -122,7 +122,7 @@ input[type=text] {
     color:white;
 }
 
-#add-form{
+.add-form{
     margin: auto;
     position: relative;
     top: 100px;

@@ -3,12 +3,11 @@ package com.kansascitycoffee.sourced.models;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-import java.util.List;
 import java.util.ArrayList;
-
+import java.util.List;
 
 @Entity
-public class Cafe {
+public class Coffee {
     @Id
     @GeneratedValue(strategy =  GenerationType.AUTO)
     private int id;
@@ -19,23 +18,25 @@ public class Cafe {
 
     @NotBlank
     @Size(max = 500)
-    private String location;
-
-    @NotBlank
-    @Size(max = 999)
     private String description;
 
-    @OneToMany
-    @JoinColumn
-    private List<Coffee> coffees = new ArrayList<>();
+    @ManyToOne
+    private Cafe cafe;
 
-    public Cafe(){}
+    @ManyToOne
+    private Farm farm;
 
-    public Cafe(String name, String location, String description, Farm farm){
+    public Coffee(){}
+
+    public Coffee(Cafe cafe, Farm farm, String name, String description){
         this();
-        this.location = location;
+        this.cafe = cafe;
+        this.farm = farm;
+        this.name = name;
         this.description = description;
     }
+
+
 
     public int getId() {
         return id;
@@ -43,6 +44,22 @@ public class Cafe {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public Cafe getCafe() {
+        return cafe;
+    }
+
+    public void setCafe(Cafe cafe) {
+        this.cafe = cafe;
+    }
+
+    public Farm getFarm() {
+        return farm;
+    }
+
+    public void setFarm(Farm farm) {
+        this.farm = farm;
     }
 
     public String getName() {
@@ -53,13 +70,6 @@ public class Cafe {
         this.name = name;
     }
 
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
 
     public String getDescription() {
         return description;
@@ -67,14 +77,6 @@ public class Cafe {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public List<Coffee> getCoffees() {
-        return coffees;
-    }
-
-    public void setCoffees(List<Coffee> coffees) {
-        this.coffees = coffees;
     }
 
 }

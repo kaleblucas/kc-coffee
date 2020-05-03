@@ -3,12 +3,11 @@ package com.kansascitycoffee.sourced.models;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-import java.util.List;
 import java.util.ArrayList;
-
+import java.util.List;
 
 @Entity
-public class Cafe {
+public class Farm {
     @Id
     @GeneratedValue(strategy =  GenerationType.AUTO)
     private int id;
@@ -29,13 +28,16 @@ public class Cafe {
     @JoinColumn
     private List<Coffee> coffees = new ArrayList<>();
 
-    public Cafe(){}
+    public Farm(){}
 
-    public Cafe(String name, String location, String description, Farm farm){
+    public Farm(String name, String location, String description){
         this();
+        this.name = name;
         this.location = location;
         this.description = description;
     }
+
+
 
     public int getId() {
         return id;
@@ -43,6 +45,14 @@ public class Cafe {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public List<Coffee> getCoffees() {
+        return coffees;
+    }
+
+    public void setCoffees(List<Coffee> coffees) {
+        this.coffees = coffees;
     }
 
     public String getName() {
@@ -67,14 +77,6 @@ public class Cafe {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public List<Coffee> getCoffees() {
-        return coffees;
-    }
-
-    public void setCoffees(List<Coffee> coffees) {
-        this.coffees = coffees;
     }
 
 }
