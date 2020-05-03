@@ -1,4 +1,5 @@
 
+
 # Overview
 This is an attempt to make transparent the cafes, the suppliers, the farms, etc. It's the cafe's responsibility to make sure their coffee is ethically sourced from farms that benefit their communities. We hope to make the public aware if they do by cataloging the logistic chain from plant to cafe (farms to coffees, coffees to cafes) There are 200 cafes in KC, and not everyone will participate, but we want to be a core resource in identifying the areas that are least transparent in the coffee-to-cup logistic chain. By doing so, we can rest assured that the farmers putting their time and care into the product are supported for the long-term.
 
@@ -65,3 +66,17 @@ https://trello.com/b/tu1XRmu7
 >
 > \> (end 4.13.2020)
 </details>
+
+<details>
+ <summary>5.3.2020—Database Handling</summary>
+ 
+>Over this sprint, we added two model classes: Coffee and Farm. This is sketch of how these classes are intended to interact with the whole: 
+> <img src="https://github.com/kaleblucas/kc-coffee/blob/master/md_images/5.3.20_sketch1.png?raw=true" width="400">
+>This will allow us to have more specific and robust data, building greater relationships and should set us up for a more refined experience in the end.
+>
+>Below is some rough implementation of forms to show proof-of-concept toward the ability to add these entries to the database via the web-UI.
+> <img src="https://github.com/kaleblucas/kc-coffee/blob/master/md_images/5.3.20_forms.PNG?raw=true" width="400">
+>
+>Lastly, here's a clip of what our Coffee data looks like in the database:
+> <img src="https://github.com/kaleblucas/kc-coffee/blob/master/md_images/5.3.20_mysql.PNG?raw=true" width="400">
+ </details>
