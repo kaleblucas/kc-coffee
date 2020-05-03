@@ -70,13 +70,21 @@ https://trello.com/b/tu1XRmu7
 <details>
  <summary>5.3.2020—Database Handling</summary>
  
->Over this sprint, we added two model classes: Coffee and Farm. This is sketch of how these classes are intended to interact with the whole: 
+>Over this sprint, we added two model classes: Coffee and Farm. This is sketch of how these classes are intended to interact with the whole:
+>
 > <img src="https://github.com/kaleblucas/kc-coffee/blob/master/md_images/5.3.20_sketch1.png?raw=true" width="400">
+>
 >This will allow us to have more specific and robust data, building greater relationships and should set us up for a more refined experience in the end.
 >
 >Below is some rough implementation of forms to show proof-of-concept toward the ability to add these entries to the database via the web-UI.
+>
 > <img src="https://github.com/kaleblucas/kc-coffee/blob/master/md_images/5.3.20_forms.PNG?raw=true" width="400">
 >
+>
 >Lastly, here's a clip of what our Coffee data looks like in the database:
+>
 > <img src="https://github.com/kaleblucas/kc-coffee/blob/master/md_images/5.3.20_mysql.PNG?raw=true" width="400">
+>
+>
+> \> (end 5.3.2020)
  </details>
