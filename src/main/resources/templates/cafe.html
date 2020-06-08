@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:include="fragments :: head"></head>
+<body>
+<nav th:replace="fragments :: navigation"></nav>
+
+
+<h2 th:text="${cafe.getName()}"></h2>
+<div th:replace="fragments :: map"></div>
+<div class="cafe-wrapper">
+        <h3>BIO:</h3>
+        <p style="text-align:justify;" th:text="${cafe.getDescription()}"></p>
+        <h3>CURRENTLY SERVING:</h3>
+        <th:block class = "origin-block" th:each="origin : ${cafe.origins}">
+                <span>&rarr;  </span><span class="origin-name" th:text="${origin.getName().toUpperCase()}"></span><span>, based in the </span><span class="origin-name" th:text="${origin.getRegion().toUpperCase()}"></span><span> region.</span>
+                <p th:text="${origin.getDescription()}"></p>
+        </th:block>
+</div>
+</body>
+</html>

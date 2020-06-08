@@ -10,12 +10,145 @@
 </head>
 <body>
 <nav th:fragment="navigation" id="nav-bar">
-    <h1><a id="nav-header" href="javascript:;">>&thinsp;coffee</a></h1>
-    <ul id="nav-link-ul">
-        <li><a class="nav-link" href="/browse">browse</a></li>
-        <li><a class="nav-link" href="/edit">edit</a></li>
-        <li><a class="nav-link" href="/about">about</a></li>
-    </ul>
+    <h1 id="nav-header"><a id="nav-header-a" th:href="@{/}">cafe origins</a></h1><!--
+    --><form id="nav-search" th:action="@{/search}" method="post"><!--
+    --><input type="text" name="searchTerm" id="searchTerm" placeholder="search"/><!--
+    --></form><!--
+    --><ul id="nav-link-ul"><!--
+    --><li><a class="nav-link" href="/">browse</a></li><!--
+    --><li><a class="nav-link" href="/edit">edit</a></li><!--
+    --><li><a class="nav-link" href="/about">about</a></li><!--
+    --></ul>
 </nav>
+<div th:fragment="map">
+    <script th:inline="javascript">
+      var map;
+      var service;
+      var infowindow;
+
+      function initMap() {
+        var kansasCity = new google.maps.LatLng(39.010, -94.579);
+
+        infowindow = new google.maps.InfoWindow();
+
+        map = new google.maps.Map(
+            document.getElementById('map'), {
+            center: kansasCity,
+             zoom: 15,
+                       styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#17263c'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ]
+             });
+
+        var request = {
+          query: /*[[${cafe.getName()}]]*/ "Kansas City",
+          fields: ['name', 'geometry'],
+        };
+
+        service = new google.maps.places.PlacesService(map);
+
+        service.findPlaceFromQuery(request, function(results, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            for (var i = 0; i < results.length; i++) {
+              createMarker(results[i]);
+            }
+
+            map.setCenter(results[0].geometry.location);
+          }
+        });
+      }
+
+      function createMarker(place) {
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.setContent(place.name);
+          infowindow.open(map, this);
+        });
+      }
+    </script>
+    <div id="map"></div>
+    <script th:inline="javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJuU57bm106Je_8RI1za_saTmHklbrn_4&libraries=places&callback=initMap" async defer></script>
+</div>
 </body>
 </html>

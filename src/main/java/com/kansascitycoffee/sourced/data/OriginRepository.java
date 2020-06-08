@@ -1,6 +1,6 @@
 package com.kansascitycoffee.sourced.data;
 
-import com.kansascitycoffee.sourced.models.Farm;
+import com.kansascitycoffee.sourced.models.Origin;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -8,5 +8,5 @@ import javax.transaction.Transactional;
 
 @Repository
 @Transactional
-public interface FarmRepository extends CrudRepository<Farm, Integer> {
+public interface OriginRepository extends CrudRepository<Origin, Integer> {
 }

@@ -7,10 +7,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Coffee {
+public class Origin {
     @Id
     @GeneratedValue(strategy =  GenerationType.AUTO)
     private int id;
+
+    @NotBlank
+    @Size(max = 99)
+    private String region;
 
     @NotBlank
     @Size(max = 99)
@@ -20,18 +24,15 @@ public class Coffee {
     @Size(max = 500)
     private String description;
 
-    @ManyToOne
-    private Cafe cafe;
+    @ManyToMany
+    private List<Cafe> cafes = new ArrayList<>();
 
-    @ManyToOne
-    private Farm farm;
 
-    public Coffee(){}
+    public Origin(){}
 
-    public Coffee(Cafe cafe, Farm farm, String name, String description){
+    public Origin(String region, String name, String description){
         this();
-        this.cafe = cafe;
-        this.farm = farm;
+        this.region = region;
         this.name = name;
         this.description = description;
     }
@@ -46,20 +47,20 @@ public class Coffee {
         this.id = id;
     }
 
-    public Cafe getCafe() {
-        return cafe;
+    public List<Cafe> getCafes() {
+        return cafes;
     }
 
-    public void setCafe(Cafe cafe) {
-        this.cafe = cafe;
+    public void setCafes(List<Cafe> cafes) {
+        this.cafes = cafes;
     }
 
-    public Farm getFarm() {
-        return farm;
+    public String getRegion() {
+        return region;
     }
 
-    public void setFarm(Farm farm) {
-        this.farm = farm;
+    public void setRegion(String region) {
+        this.region = region;
     }
 
     public String getName() {

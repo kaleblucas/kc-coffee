@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:include="fragments :: head">
+</head>
+<nav th:replace="fragments :: navigation"></nav>
+<div class="content-wrapper">
+
+    <div class="cafe-wrapper">
+        <form class = "edit-form" th:action="@{/edit}" method="post">
+            <input type="hidden" th:field="*{cafe.id}"/>
+            <label class="form-label">NAME: </label><input class="input-update" th:value="${cafe.getName()}" th:field="${cafe.name}"/><br><br>
+            <div th:replace="fragments :: map"></div><br>
+            <label class="form-label">BIO: </label>
+            <input class="input-update" id="input-description" th:value="${cafe.getDescription()}" th:field="${cafe.description}"/><br><br>
+            <label class = "form-label" th:for="origins">ORIGINS SERVED:</label><br><br>
+            <div class="origin-checkbox">
+            <div th:each="origin : ${origins}">
+                <label><input type="checkbox" name="originIds" th:value="${origin.id}"><span th:text="${origin.name}"></span></label>
+            </div>
+            </div>
+            <input id="update-button" class="form-button" type="submit" value="Update"/>
+        </form>
+        <form class = "edit-form" th:action="@{/edit/cafe/del(cafeId=${cafe.getId()}, del='yes')}" method="post">
+            <input class="form-button" type="submit" onclick="return confirm('Are you sure you want to delete? This action cannot be undone.')" value="Delete" /></input>
+        </form>
+    </div>
+
+</div>
+</body>
+</html>

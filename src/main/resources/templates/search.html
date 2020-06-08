@@ -6,8 +6,8 @@
 <nav th:replace="fragments :: navigation"></nav>
 
 <div class="content-wrapper">
-    <h2>Kansas City's Finest Cafes</h2>
-    <div class="cafe-item-wrapper" th:each="cafe : ${cafes}">
+    <h2 th:text = "'Results for &quot;' + ${searchTerm} + '&quot;'"></h2>
+    <div class="cafe-item-wrapper" th:each="cafe : ${cafeResults}">
         <form th:action="@{/cafe(cafeId=${cafe.getId()})}" method="post">
             <button class="cafe-item" type="submit" th:text="${cafe.getName().toUpperCase()}"></button>
         </form>

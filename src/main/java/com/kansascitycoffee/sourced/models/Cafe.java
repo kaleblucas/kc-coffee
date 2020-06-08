@@ -17,25 +17,24 @@ public class Cafe {
     @Size(max = 99)
     private String name;
 
-    @NotBlank
-    @Size(max = 500)
-    private String location;
 
     @NotBlank
     @Size(max = 999)
     private String description;
 
-    @OneToMany
-    @JoinColumn
-    private List<Coffee> coffees = new ArrayList<>();
+    @ManyToMany
+    private List<Origin> origins = new ArrayList<>();
 
     public Cafe(){}
 
-    public Cafe(String name, String location, String description, Farm farm){
+    public Cafe(String name, String location, String description, List<Origin> origins){
         this();
-        this.location = location;
+        this.name = name;
         this.description = description;
+        this.origins = origins;
     }
+
+
 
     public int getId() {
         return id;
@@ -53,14 +52,6 @@ public class Cafe {
         this.name = name;
     }
 
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -69,12 +60,12 @@ public class Cafe {
         this.description = description;
     }
 
-    public List<Coffee> getCoffees() {
-        return coffees;
+    public List<Origin> getOrigins() {
+        return origins;
     }
 
-    public void setCoffees(List<Coffee> coffees) {
-        this.coffees = coffees;
+    public void setOrigins(List<Origin> origins) {
+        this.origins = origins;
     }
 
 }

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+</head>
+<body>
+<nav th:replace="fragments :: navigation"></nav>
+<div class="content-wrapper">
+    <form class="add-form" action="add" method="post">
+            <label>ORIGIN:<br> <input name="name-entry" type="text" th:field="${origin.name}"></label><br>
+            <label>REGION:<br> <input type="text" th:field="${origin.region}"></label><br>
+            <label>DESCRIPTION:<br><input name="description-entry" type="text" th:field="${origin.description}"></label><br>
+            <input name="add-button" type="submit" value="&#65291">
+        </form>
+</div>
+
+
+</body>
+</html>
