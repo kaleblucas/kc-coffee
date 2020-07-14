@@ -93,7 +93,7 @@ https://trello.com/b/tu1XRmu7
 <details>
  <summary>6.7.2020—Reaching an MVP</summary>
  
->My documentation skills have lacked over the last several weeks, but we've developed a minimum viable product for this application. The original MVC set-up was flawed in its original conception. We've tabled the idea of introducing 'farms' as it will be more difficult to source that information. The focus we have now is on cafes, their available coffee origins, and describing the origin.
+>My documentation skills have lacked over the last several weeks, but we've developed a minimum viable product for this application. The original MVC set-up was flawed in its original conception. We've tabled the idea of introducing 'farms' as it will be more difficult to source that information. The focus we have now is on cafes, their available coffee origins, and describing the origin. This application was deployed using AWS, and may (or may not) be available to see at http://cafeorigins-env.eba-gu2e2vdr.us-east-1.elasticbeanstalk.com/
 >
 >There are still many features to implement, but this is just the beginning!
 >
@@ -136,5 +136,11 @@ https://trello.com/b/tu1XRmu7
 >Add Cafe: Define the cafe here and add it to the database.
 >
 > <img src="https://github.com/kaleblucas/kc-coffee/blob/master/md_images/6.7.20_cafe-add.png?raw=true" width="600">
+>
+>___
+>About Page: Describes purpose of the website.
+>
+> <img src="https://github.com/kaleblucas/kc-coffee/blob/master/md_images/6.7.20_about.png?raw=true" width="600">
+>
 > (end 6.7.2020)
  </details>
