@@ -97,7 +97,7 @@ https://trello.com/b/tu1XRmu7
 >
 >There are still many features to implement, but this is just the beginning!
 >
->See the photo-dump below to understand the features currently developed and where the design led us. Right click & open the image in a new tab to see it in full scale.
+>See the photo-dump below to understand the features currently developed and where the design led us. Click to open the image and see it in full scale.
 >
 > ___
 > 
