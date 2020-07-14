@@ -1,5 +1,6 @@
 
 
+
 # Overview
 This is an attempt to make transparent the cafes, the suppliers, the farms, etc. It's the cafe's responsibility to make sure their coffee is ethically sourced from farms that benefit their communities. We hope to make the public aware if they do by cataloging the logistic chain from plant to cafe (farms to origins, origins to cafes) There are 200 cafes in KC, and not everyone will participate, but we want to be a core resource in identifying the areas that are least transparent in the coffee-to-cup logistic chain. By doing so, we can rest assured that the farmers putting their time and care into the product are supported for the long-term.
 
@@ -87,4 +88,53 @@ https://trello.com/b/tu1XRmu7
 >
 >
 > \> (end 5.3.2020)
+ </details>
+ 
+<details>
+ <summary>6.7.2020—Reaching an MVP</summary>
+ 
+>My documentation skills have lacked over the last several weeks, but we've developed a minimum viable product for this application. The original MVC set-up was flawed in its original conception. We've tabled the idea of introducing 'farms' as it will be more difficult to source that information. The focus we have now is on cafes, their available coffee origins, and describing the origin.
+>
+>There are still many features to implement, but this is just the beginning!
+>
+>See the photo-dump below to understand the features currently developed and where the design led us. Right click & open the image in a new tab to see it in full scale.
+>
+> ___
+> 
+>Main-page: Shows list of cafes. The color behind the cafe name is randomly chosen based on a color pallet array. 
+>
+> <img src="https://github.com/kaleblucas/kc-coffee/blob/master/md_images/6.7.20_cafe-1.png?raw=true" width="600">
+>
+> <img src="https://github.com/kaleblucas/kc-coffee/blob/master/md_images/6.7.20_cafe-2.png?raw=true" width="600">
+>
+>___
+>Cafe Page: Includes unique map showing location of cafe, a short bio, and a list of the available coffees.
+>
+> <img src="https://github.com/kaleblucas/kc-coffee/blob/master/md_images/6.7.20_cafe-page.png?raw=true" width="600">
+>
+> ___
+>Search: Non-case sensitive search returns results based on the name of the cafe.
+>
+> <img src="https://github.com/kaleblucas/kc-coffee/blob/master/md_images/6.7.20_search.png?raw=true" width="600">
+>
+>___
+>Edit Page: Allows you to select a cafe to edit or add a new entry.
+>
+> <img src="https://github.com/kaleblucas/kc-coffee/blob/master/md_images/6.7.20_edit.png?raw=true" width="600">
+>
+>___
+>Edit Cafe: Modify values and checkbox-select available coffees from a defined list of coffees stored in the database.
+>
+> <img src="https://github.com/kaleblucas/kc-coffee/blob/master/md_images/6.7.20_cafe-edit.png?raw=true" width="600">
+>
+>___
+>Delete Cafe: Ability to remove entry entirely from the database with warning prompt.
+>
+> <img src="https://github.com/kaleblucas/kc-coffee/blob/master/md_images/6.7.20_delete.png?raw=true" width="600">
+>
+>___
+>Add Cafe: Define the cafe here and add it to the database.
+>
+> <img src="https://github.com/kaleblucas/kc-coffee/blob/master/md_images/6.7.20_cafe-add.png?raw=true" width="600">
+> (end 6.7.2020)
  </details>
