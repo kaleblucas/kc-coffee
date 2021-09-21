@@ -146,3 +146,24 @@ https://trello.com/b/tu1XRmu7
 >
 > (end 6.7.2020)
  </details>
+ 
+ <details>
+ <summary>9.21.2021—Authorization</summary>
+ 
+>My original app has faded from AWS (primarily due to free-tier loss), but I hope to revive it.
+>Here's some word splooge to facilitate the (internal) conversation:
+>
+>RE: Authentication
+>My short time in the industry has given me some insight on how authorization, authentication and identification perform in the real world.
+>I question if identification is necessary, or if we can simply allow pass a generic yet securely generated token to authorize an action (i.e. "CUD" of the CRUD)
+>Maybe it is.. maybe not! Solutions research to follow. We may contrive some advanced level of security needed simply for the sake of doing so, and the journey of learning that 
+>follows.
+>
+>RE: Deployment
+>I need to find a solution to handle deployment and staging of the environment. Something.. free! I was using Amazon Elastic Compute Cloud, but alas my trial has
+>expired. I'm not sure if there are other means within AWS to handle my needs, but we shall see.
+>
+>
+> (end 9.21.2021)
+ </details>
+
